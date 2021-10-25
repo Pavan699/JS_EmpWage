@@ -85,5 +85,24 @@ let mapDayWithWageArr = EmpWageArray.map(mapDailyWithWage);
 console.log("Daily Wage by using Map Function-------");
 console.log(mapDayWithWageArr);
 
+//Filter function to show the Full-time Wages-160
+function fullTimeWage(dailyWage){
+    return dailyWage.includes("160");
+}
+let fullDayWageArr = mapDayWithWageArr.filter(fullTimeWage);
+console.log("Filter function for fulltime Employee on that day------");
+console.log(fullDayWageArr);
+
+//First day of full-time by using find function
+function findFullTimeWage(dailyWage){
+    return dailyWage.includes("160");
+}
+console.log("First day of fulltime wage was earned on day : "+mapDayWithWageArr.find(findFullTimeWage));
+
+//Checking All the employees having Full-day or not by using every function
+function isAllFullTimeWage(dailyWage){
+    return dailyWage.includes("160");
+}
+console.log("check if all element have full time wage: "+fullDayWageArr.every(isAllFullTimeWage));
 console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 
