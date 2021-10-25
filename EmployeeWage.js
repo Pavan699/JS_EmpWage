@@ -103,6 +103,12 @@ console.log("First day of fulltime wage was earned on day : "+mapDayWithWageArr.
 function isAllFullTimeWage(dailyWage){
     return dailyWage.includes("160");
 }
-console.log("check if all element have full time wage: "+fullDayWageArr.every(isAllFullTimeWage));
+console.log("check if all element have full time wage: "+fullDayWageArr.every(isAllFullTimeWage));//every eill check for all elements
+
+//Checking for the Part time wage-80
+function isAnyPartTimeWage(dailyWage){
+    return dailyWage.includes("80");
+}
+console.log("Checking for Part-Time wage: "+mapDayWithWageArr.some(isAnyPartTimeWage));//Some will check one of the element is follows the conition
 console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 
