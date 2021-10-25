@@ -55,7 +55,25 @@ while(Total_Work_Days < Max_Work_Days && TotalHours <Max_Work_Hours)//condition 
     Total_Work_Days++;
 }
 //calculating Emp-Wage by using Array...
+console.log("Employee Wage By using Array--------")
 console.log("Daily Wages : "+EmpWageArray);
 let EmpWage = CalculateWage(TotalHours);
 console.log("Wage of Month : "+EmpWage + " And Work-Hours are : "+TotalHours+" Work Days : "+Total_Work_Days);
+
+let Total_Wage = 0;
+function sum(dailyWage){
+    Total_Wage += dailyWage;
+}
+
+//By using Reduce function 
+console.log("Employee Wage By using Reduce function------")
+EmpWageArray.forEach(sum);
+console.log("Total days "+Total_Work_Days+" Hours worked "+TotalHours+" Emp wage: "+Total_Wage);
+
+function totalWages(totalWages,DailyWage){
+    return totalWages + DailyWage;
+}
+console.log("Emp wage with reduce: "+EmpWageArray.reduce(totalWages,0));
+
 console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+
